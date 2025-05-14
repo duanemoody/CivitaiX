@@ -8,6 +8,7 @@
 // @include      https://civitai.com/*
 // @connect      civitai.com
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=civitai.com
+// @downloadURL  https://github.com/duanemoody/CivitaiX/raw/refs/heads/main/CivitaiX.user.js
 // @grant        GM_addStyle
 // ==/UserScript==
 
