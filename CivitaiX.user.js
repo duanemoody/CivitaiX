@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Civitai X
 // @namespace    Civitai-X
-// @version      1.0.5
+// @version      1.0.6
 // @description  Some new features for working with Civitai
 // @author       Duane Moody
 // @match        https://civitai.com
@@ -16,7 +16,7 @@
     'use strict';
 
     // Make prompt gen count badges into buttons to click all the that prompt's gens' checkboxes
-    const	generationsColumn	= 'div.mantine-1vbsd0c',
+    const	generationsColumn	= 'div.mantine-1avyp1d',
 		gCol			= document.querySelector(generationsColumn),
  		gensCountBadge		= 'div.mantine-Badge-root',
 		prmptSelector		= 'div.mantine-1s7mjhu',
