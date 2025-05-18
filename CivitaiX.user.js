@@ -1,12 +1,15 @@
 // ==UserScript==
 // @name         Civitai X
 // @namespace    Civitai-X
-// @version      1.0.18
+// @version      1.0.19
 // @description  Some new features for working with Civitai
 // @author       Duane Moody
 // @match        https://civitai.com
+// @match        https://civitai.green
 // @include      https://civitai.com/*
+// @include      https://civitai.green/*
 // @connect      civitai.com
+// @connect      civitai.green
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=civitai.com
 // @updateURL    https://github.com/duanemoody/CivitaiX/raw/refs/heads/main/CivitaiX.user.js
 // @downloadURL  https://github.com/duanemoody/CivitaiX/raw/refs/heads/main/CivitaiX.user.js
@@ -17,7 +20,7 @@
     'use strict';
     console.info('CivitaiX running');
 
-	const 
+	const
 		body = document.querySelector('body'),
 		// Selectors are defined here because mantine could change them later
 		sel = {
