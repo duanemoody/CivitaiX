@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Civitai X
 // @namespace    Civitai-X
-// @version      1.0.20
+// @version      1.0.21
 // @description  Some new features for working with Civitai
 // @author       Duane Moody
 // @match        https://civitai.com
@@ -30,6 +30,7 @@
 			cbSelector:		'input[type="checkbox"]',
 			badgeEarlyAccess:	'div.mantine-1503eym',
 			modelTitle:		'div.mantine-pd27lf',
+			articleTitle:		'div.mantine-44308d',
 			modelGrid:		'div.mantine-1ofgurw',
 			saveTo:			'div.mantine-1usso6i',
 			notifItem:		'a.mantine-1exo8hb'
@@ -39,7 +40,7 @@
 	GM_addStyle(`
 		${sel.badgeEarlyAccess} {background-color: orange;}
 		/* ${sel.modelGrid}	{grid-template-columns: repeat(4, 25%)!important;} */ 
-		${sel.modelTitle} {
+		${sel.modelTitle}, ${sel.articleTitle} {
 			-webkit-text-stroke: 2px black;
 			paint-order: stroke fill;
 		}
