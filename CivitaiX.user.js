@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Civitai X
 // @namespace    Civitai-X
-// @version      1.0.19
+// @version      1.0.20
 // @description  Some new features for working with Civitai
 // @author       Duane Moody
 // @match        https://civitai.com
@@ -27,29 +27,31 @@
 			generationsColumn:	'div.mantine-1avyp1d',
 			gensCountBadge:		'div.mantine-Badge-root',
 			prmptSelector:		'div.mantine-1s7mjhu',
-			cbSelector:			'input[type="checkbox"]',
+			cbSelector:		'input[type="checkbox"]',
 			badgeEarlyAccess:	'div.mantine-1503eym',
-			modelTitle:			'div.mantine-pd27lf',
-			modelGrid:			'div.mantine-1ofgurw',
-			saveTo:				'div.mantine-1usso6i'
+			modelTitle:		'div.mantine-pd27lf',
+			modelGrid:		'div.mantine-1ofgurw',
+			saveTo:			'div.mantine-1usso6i',
+			notifItem:		'a.mantine-1exo8hb'
 		};
 
-    // CSS: Don't use Greasemonkey because they removed this method
+	// CSS: Don't use Greasemonkey because they removed this method
 	GM_addStyle(`
-		${sel.badgeEarlyAccess} {background-color: orange;} 
+		${sel.badgeEarlyAccess} {background-color: orange;}
 		/* ${sel.modelGrid}	{grid-template-columns: repeat(4, 25%)!important;} */ 
 		${sel.modelTitle} {
-			-webkit-text-stroke: 2px black; 
+			-webkit-text-stroke: 2px black;
 			paint-order: stroke fill;
-		} 
-		${sel.saveTo} {max-height:70vh;} 
+		}
+		${sel.saveTo} {max-height:70vh;}
 		${sel.gensCountBadge} {cursor: pointer;}
+  		/* ${sel.notifItem}[href^='/user/'] {background-color: #7fffd463;} */
 	`);
 
-    // Add event listeners
-    body.addEventListener(
+	// Listeners:
+	body.addEventListener(
 		'click', e => {
-		    /* Make prompt gen count badges into buttons to click all the that prompt's gens' checkboxes. Raw clicks are sent instead of directly changing checkbox values because the download/delete buttons don't actually reference checkbox values. */
+			// Make prompt gen count badges into buttons to click all the that prompt's gens' checkboxes. Raw clicks are sent instead of directly changing checkbox values because the download/delete buttons don't actually reference checkbox values.
 			e.target.closest(sel.gensCountBadge) && e.target.closest(sel.prmptSelector).querySelectorAll(sel.cbSelector).forEach(cb => {cb.click()});
 		}
 	, false);
