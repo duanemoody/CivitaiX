@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Civitai X
 // @namespace    Civitai-X
-// @version      1.0.21
+// @version      1.0.22
 // @description  Some new features for working with Civitai
 // @author       Duane Moody
 // @match        https://civitai.com
@@ -45,7 +45,10 @@
 			paint-order: stroke fill;
 		}
 		${sel.saveTo} {max-height:70vh;}
-		${sel.gensCountBadge} {cursor: pointer;}
+  		${sel.gensCountBadge}:first-child {
+			cursor: pointer;
+            		&:hover {border: 1px solid blue;}
+        	}
   		/* ${sel.notifItem}[href^='/user/'] {background-color: #7fffd463;} */
 	`);
 
@@ -56,5 +59,4 @@
 			e.target.closest(sel.gensCountBadge) && e.target.closest(sel.prmptSelector).querySelectorAll(sel.cbSelector).forEach(cb => {cb.click()});
 		}
 	, false);
-
 })();
