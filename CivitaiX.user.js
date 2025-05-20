@@ -25,6 +25,7 @@
 		// Selectors are defined here because mantine could change them later
 		sel = {
 			generationsColumn:	'div.mantine-1avyp1d',
+			gensInfoBox:		'div.mantine-fxhya2',
 			gensCountBadge:		'div.mantine-Badge-root',
 			prmptSelector:		'div.mantine-1s7mjhu',
 			cbSelector:		'input[type="checkbox"]',
@@ -39,13 +40,13 @@
 	// CSS: Don't use Greasemonkey because they removed this method
 	GM_addStyle(`
 		${sel.badgeEarlyAccess} {background-color: orange;}
-		/* ${sel.modelGrid}	{grid-template-columns: repeat(4, 25%)!important;} */ 
+		/* ${sel.modelGrid}	{grid-template-columns: repeat(4, 25%)!important;} */
 		${sel.modelTitle}, ${sel.articleTitle} {
 			-webkit-text-stroke: 2px black;
 			paint-order: stroke fill;
 		}
 		${sel.saveTo} {max-height:70vh;}
-  		${sel.gensCountBadge}:first-child {
+  		${sel.gensInfoBox} ${sel.gensCountBadge}:first-child {
 			cursor: pointer;
             		&:hover {border: 1px solid blue;}
         	}
