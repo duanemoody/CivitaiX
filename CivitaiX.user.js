@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Civitai X
 // @namespace    Civitai-X
-// @version      1.0.22
+// @version      1.0.23
 // @description  Some new features for working with Civitai
 // @author       Duane Moody
 // @match        https://civitai.com
