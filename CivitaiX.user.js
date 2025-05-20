@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Civitai X
 // @namespace    Civitai-X
-// @version      1.0.23
+// @version      1.0.24
 // @description  Some new features for working with Civitai
 // @author       Duane Moody
 // @match        https://civitai.com
@@ -34,6 +34,7 @@
 			articleTitle:		'div.mantine-44308d',
 			modelGrid:		'div.mantine-1ofgurw',
 			saveTo:			'div.mantine-1usso6i',
+			notifColumn:		'div.mantine-gfy7tt',
 			notifItem:		'a.mantine-1exo8hb'
 		};
 
@@ -50,6 +51,7 @@
 			cursor: pointer;
             		&:hover {border: 1px solid blue;}
         	}
+	 	${sel.notifColumn} {width: 50%;}
   		/* ${sel.notifItem}[href^='/user/'] {background-color: #7fffd463;} */
 	`);
 

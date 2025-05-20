@@ -7,6 +7,7 @@ A userscript intended to scratch a few personal itches using Civitai.com:
   * Model/Article titles now outlined to pop better against lighter preview images ![1000005174](https://github.com/user-attachments/assets/89a45c1b-ddea-4568-8dfa-ae8d3eff6e7e)
   * "Early Access" badge given its own background color differentiating it from Update Green ![1000005176](https://github.com/user-attachments/assets/d5021d3e-0da7-4198-8d45-f7081af2994a)
   * "Save To:" category list height now proportional to viewport, not fixed ![1000005178](https://github.com/user-attachments/assets/06421abd-475a-4f57-b13a-b26d9b9b76ca)
+  * Notifications column now set to 50% instead of a fixed pixel value
 
 ## Installation:
 First, make sure you have a userscript manager like [Tampermonkey](https://www.tampermonkey.net) or [Violentmonkey](https://violentmonkey.github.io) installed in your browser. Mac Safari users, get the [Userscripts](https://apps.apple.com/us/app/userscripts/id1463298887) app. Ironically, *don't* install Greasemonkey because it disabled the ability to modify styles years ago.
@@ -16,3 +17,8 @@ Then, go [here](https://github.com/duanemoody/CivitaiX/raw/refs/heads/main/Civit
 
 ## Usage
 Most of this is automatic. To check/uncheck all the gens from a single prompt, click the generation count icon at top left of each prompt output.
+
+## Technical notes
+I would have preferred to make "check/uncheck all items in this prompt" its own button instead of repurposing the "Number of gens" badge; most of the site content is "lazy loading" meaning it's dynamically created/inserted as you scroll, so my code would need to be listening for the scrolling then examining what needs to have new buttons added. For now it's more reliable this way.
+
+The "check/uncheck" widget only sends clicks to the checkboxes, it doesn't actually set/unset their checked state directly so if one of them was already checked it gets unchecked. I'm doing it this way because the "Download" and "Delete" buttons do not actually read the state of the checkboxes and instead reference a hidden array updated by manually clicking those checkboxes. Not how I would write it, but…
