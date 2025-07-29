@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Civitai X
 // @namespace    Civitai-X
-// @version      1.0.24
+// @version      1.0.25
 // @description  Some new features for working with Civitai
 // @author       Duane Moody
 // @match        https://civitai.com
@@ -30,7 +30,7 @@
 			prmptSelector:		'div.mantine-1s7mjhu',
 			cbSelector:		'input[type="checkbox"]',
 			badgeEarlyAccess:	'div.mantine-1503eym',
-			modelTitle:		'div.mantine-pd27lf',
+			modelTitle:		'.Cards_dropShadow__mBBIx',
 			articleTitle:		'div.mantine-44308d',
 			modelGrid:		'div.mantine-1ofgurw',
 			saveTo:			'div.mantine-1usso6i',
