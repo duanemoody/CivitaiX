@@ -5,7 +5,7 @@ A userscript intended to scratch a few personal itches using Civitai.com:
 
 * CSS tweaks:
   * Model/Article titles now outlined to pop better against lighter preview images ![1000005174](https://github.com/user-attachments/assets/89a45c1b-ddea-4568-8dfa-ae8d3eff6e7e)
-  * "Early Access" badge given its own background color differentiating it from Update Green ![1000005176](https://github.com/user-attachments/assets/d5021d3e-0da7-4198-8d45-f7081af2994a)
+  * ~~"Early Access" badge given its own background color differentiating it from Update Green ![1000005176](https://github.com/user-attachments/assets/d5021d3e-0da7-4198-8d45-f7081af2994a)~~ (No longer distinct rom Updated)
   * "Save To:" category list height now proportional to viewport, not fixed ![1000005178](https://github.com/user-attachments/assets/06421abd-475a-4f57-b13a-b26d9b9b76ca)
   * Notifications column now set to 50% instead of a fixed pixel value
 
