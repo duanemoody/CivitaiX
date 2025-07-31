@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Civitai X
 // @namespace    Civitai-X
-// @version      1.0.25
+// @version      1.0.26
 // @description  Some new features for working with Civitai
 // @author       Duane Moody
 // @match        https://civitai.com
@@ -59,7 +59,9 @@
 	body.addEventListener(
 		'click', e => {
 			// Make prompt gen count badges into buttons to click all the that prompt's gens' checkboxes. Raw clicks are sent instead of directly changing checkbox values because the download/delete buttons don't actually reference checkbox values.
-			e.target.closest(sel.gensCountBadge) && e.target.closest(sel.prmptSelector).querySelectorAll(sel.cbSelector).forEach(cb => {cb.click()});
+			e.target.closest(sel.gensCountBadge) && 	e.target.closest(sel.prmptSelector)
+									 .querySelectorAll(sel.cbSelector)
+									 .forEach(cb => {cb.click()});
 		}
 	, false);
 })();
